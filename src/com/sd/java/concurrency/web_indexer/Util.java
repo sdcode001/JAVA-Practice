@@ -12,6 +12,22 @@ import java.net.URL;
 
 
 public class Util {
+	
+	public static InputStream getInputStream(String sourceUrl) {
+		InputStream in = null;
+		try {
+			  URL url = new URI(sourceUrl).toURL();
+			  HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+			  in = conn.getInputStream();
+		  }
+		  catch (URISyntaxException e) {
+			 e.printStackTrace();
+		  }
+		  catch(IOException ex) {
+			 ex.printStackTrace();;
+		  }
+		return in;
+	}
 
 	public static String downloadWebpageContent(String sourceUrl) throws URISyntaxException, IOException {
 		String data = null;
@@ -35,7 +51,7 @@ public class Util {
 	}
 	
 	
-	private static String readStream(InputStream inputStream) throws IOException {
+	public static String readStream(InputStream inputStream) throws IOException {
 		StringBuilder sb = new StringBuilder();
 		
 		try(BufferedReader in = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"))){

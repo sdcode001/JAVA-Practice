@@ -5,12 +5,21 @@ public class WebLink {
 	private String url;
 	//ensure memory visibility over Threads
 	private volatile String htmlContent = null;
+	private volatile boolean stop=false;
 	
     public WebLink(int id, String url) {
     	this.id=id; 
     	this.url=url;
     }
 
+    public void setStop(boolean stop) {
+    	this.stop=stop;
+    }
+    
+    public boolean getStop() {
+    	return this.stop;
+    }
+    
 	public int getId() {
 		return id;
 	}

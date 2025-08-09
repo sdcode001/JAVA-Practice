@@ -10,11 +10,17 @@ public class Executor {
 //		NaiveIndexer.add(new WebLink(2004, "https://tomcat.apache.org/tomcat-6.0-doc/virtual-hosting-howto.html"));
 //		NaiveIndexer.go();
 		
-		WaitNotifyIndexer.add(new WebLink(2001, "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"));
-		WaitNotifyIndexer.add(new WebLink(2002, "https://www.oracle.com/technetwork/java/javase/downloads/index.html"));
-		WaitNotifyIndexer.add(new WebLink(2003, "https://mindprod.com/jgloss/interfacevsabstract.html"));
-		WaitNotifyIndexer.add(new WebLink(2004, "https://tomcat.apache.org/tomcat-6.0-doc/virtual-hosting-howto.html"));
-		WaitNotifyIndexer.go();
+//		WaitNotifyIndexer.add(new WebLink(2001, "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"));
+//		WaitNotifyIndexer.add(new WebLink(2002, "https://www.oracle.com/technetwork/java/javase/downloads/index.html"));
+//		WaitNotifyIndexer.add(new WebLink(2003, "https://mindprod.com/jgloss/interfacevsabstract.html"));
+//		WaitNotifyIndexer.add(new WebLink(2004, "https://tomcat.apache.org/tomcat-6.0-doc/virtual-hosting-howto.html"));
+//		WaitNotifyIndexer.go();
+		
+		TimedDownloaderIndexer.add(new WebLink(2001, "https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html"));
+		TimedDownloaderIndexer.add(new WebLink(2002, "https://www.oracle.com/technetwork/java/javase/downloads/index.html"));
+		TimedDownloaderIndexer.add(new WebLink(2003, "https://mindprod.com/jgloss/interfacevsabstract.html"));
+		TimedDownloaderIndexer.add(new WebLink(2004, "https://tomcat.apache.org/tomcat-6.0-doc/virtual-hosting-howto.html"));
+		TimedDownloaderIndexer.go();
 	}
 
 }
